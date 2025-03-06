@@ -46,6 +46,7 @@ nav {
     height: 80px; /* Increased from 50px */
     width: auto;
     display: block;
+    max-height: 40px; /* Reduce from original size */
 }
 
 .nav-links {
@@ -477,6 +478,7 @@ footer {
 
     .logo-img {
         height: 80px; /* Increased from 40px for mobile */
+        max-height: 40px; /* Reduce from original size */
     }
 
     .hero {
@@ -491,6 +493,20 @@ footer {
     
     .hero h1 {
         font-size: 2rem;
+    }
+}
+
+/* For mobile devices */
+@media screen and (max-width: 768px) {
+    .logo-img {
+        max-height: 35px;
+    }
+}
+
+/* For very small screens */
+@media screen and (max-width: 480px) {
+    .logo-img {
+        max-height: 30px;
     }
 }
 
