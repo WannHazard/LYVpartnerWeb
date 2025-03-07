@@ -312,9 +312,22 @@ nav {
 }
 
 .about-img {
-    height: 400px;
-    background: #ddd;
-    border-radius: 10px;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.about-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-hero-img:hover {
+    transform: scale(1.05);
 }
 
 .about-content h2 {
@@ -564,6 +577,10 @@ footer {
     }
 
     .about-img-slider {
+        height: 400px;
+    }
+
+    .about-img {
         height: 400px;
     }
 }
@@ -890,4 +907,23 @@ footer {
     .service-card {
         flex: 1 1 100%;
     }
+}
+
+/* Welcome section */
+.welcome-section {
+    margin-top: 2rem;
+    padding: 2rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.welcome-section h2 {
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.welcome-section p {
+    color: #666;
+    line-height: 1.6;
 }
