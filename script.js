@@ -39,4 +39,45 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 5000);
         });
     }
+
+    const dots = document.querySelectorAll('.slider-dot');
+    const images = document.querySelectorAll('.slider-image');
+    let currentIndex = 0;
+    let interval;
+
+    function showImage(index) {
+        images.forEach(img => img.classList.remove('active'));
+        dots.forEach(dot => dot.classList.remove('active'));
+        
+        images[index].classList.add('active');
+        dots[index].classList.add('active');
+        currentIndex = index;
+    }
+
+    function nextImage() {
+        let nextIndex = (currentIndex + 1) % images.length;
+        showImage(nextIndex);
+    }
+
+    // Start automatic slideshow
+    function startSlideshow() {
+        interval = setInterval(nextImage, 5000); // Change image every 5 seconds
+    }
+
+    // Stop slideshow on user interaction
+    function stopSlideshow() {
+        clearInterval(interval);
+    }
+
+    // Add click events to dots
+    dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+            stopSlideshow();
+            showImage(index);
+            startSlideshow();
+        });
+    });
+
+    // Start the slideshow
+    startSlideshow();
 });

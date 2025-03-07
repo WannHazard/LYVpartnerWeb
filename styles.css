@@ -73,9 +73,9 @@ nav {
     position: relative;
     height: 75vh; /* Changed from 100vh to 75vh */
     overflow: hidden;
-    min-height: 500px; /* Added minimum height for smaller screens */
+    min-height: 600px; /* Updated minimum height */
     width: 100%;
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('images/hero-bg.jpg');
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('source/hero-bg.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -132,15 +132,17 @@ nav {
 }
 
 .hero h1 {
-    font-size: 2.8rem; /* Slightly smaller font size */
-    margin-bottom: 1rem;
+    font-size: 2.5rem; /* Updated font size */
+    margin-bottom: 1.5rem; /* Updated margin */
     font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Added text shadow */
 }
 
 .hero p {
-    font-size: 1.1rem; /* Adjusted font size */
-    margin-bottom: 1.5rem;
+    font-size: 1.2rem; /* Updated font size */
+    margin-bottom: 2rem; /* Updated margin */
     line-height: 1.6;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Added text shadow */
 }
 
 .hero-buttons {
@@ -187,6 +189,14 @@ nav {
     border-radius: 10px;
     overflow: hidden;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin-bottom: 2rem; /* Updated margin */
+    padding: 1.5rem; /* Updated padding */
+    background: #f8f8f8; /* Updated background */
+    transition: transform 0.3s ease; /* Added transition */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Added transform */
 }
 
 .service-img {
@@ -348,6 +358,60 @@ nav {
     font-size: 1.1rem;
 }
 
+.about-img-slider {
+    flex: 1;
+    position: relative;
+    height: 600px; /* Increased from default height */
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.slider-container {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slider-image.active {
+    opacity: 1;
+}
+
+.slider-controls {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 2;
+}
+
+.slider-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #fff;
+    background: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.slider-dot.active {
+    background: #fff;
+}
+
 /* Contact section */
 .contact {
     padding: 5rem 0;
@@ -493,6 +557,14 @@ footer {
     
     .hero h1 {
         font-size: 2rem;
+    }
+
+    .service-card {
+        flex: 1 1 100%; /* Updated flex property */
+    }
+
+    .about-img-slider {
+        height: 400px;
     }
 }
 
@@ -749,5 +821,73 @@ footer {
 @media (max-width: 768px) {
     .process-grid {
         grid-template-columns: 1fr;
+    }
+}
+
+/* Service cards and layout */
+.service-card {
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+}
+
+.services-summary {
+    text-align: center;
+    margin-top: 4rem;
+    padding: 2rem;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.services-summary h3 {
+    margin-bottom: 1rem;
+}
+
+.services-summary p {
+    max-width: 800px;
+    margin: 0 auto 2rem;
+}
+
+.services-list {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.service-row {
+    background: #f8f8f8;
+    padding: 2rem;
+    border-radius: 8px;
+}
+
+.service-row h3 {
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.service-cards {
+    display: flex;  
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.service-card {
+    flex: 1 1 calc(50% - 0.75rem);
+    min-width: 300px;
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+@media (max-width: 768px) {
+    .service-card {
+        flex: 1 1 100%;
     }
 }

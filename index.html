@@ -48,7 +48,18 @@
         <div class="container">
             <h2 class="section-title">Om L&VPartner</h2>
             <div class="about-container">
-                <div class="about-img"></div>
+                <div class="about-img-slider">
+                    <div class="slider-container">
+                        <img src="source/l&v.jpg" alt="L&V Partner arbete" class="slider-image active">
+                        <img src="source/l&vpartner2.jpg" alt="L&V Partner projekt" class="slider-image">
+                        <img src="source/l&vpartner3.jpg" alt="L&V Partner team" class="slider-image">
+                        <div class="slider-controls">
+                            <button type="button" class="slider-dot active" data-index="0" title="Go to slide 1" aria-label="Go to slide 1"></button>
+                            <button type="button" class="slider-dot" data-index="1" title="Go to slide 2" aria-label="Go to slide 2"></button>
+                            <button type="button" class="slider-dot" data-index="2" title="Go to slide 3" aria-label="Go to slide 3"></button>
+                        </div>
+                    </div>
+                </div>
                 <div class="about-content">
                     <h3>Din pålitliga partner för tak, akutservice, byggställning och snickeri</h3>
                     <p>På L&V Partner har vi över 10 års erfarenhet av att leverera högkvalitativa lösningar inom takreparationer, nödsituationer, snickeriarbeten och underhåll i Sverige. Vårt team av specialiserade hantverkare fokuserar på att ge snabb, effektiv och hållbar service i varje projekt.</p>
@@ -206,118 +217,7 @@
             </div>
         </div>
     </footer>
-    <!-- Scripts -->
-    <style>
-        .service-card {
-            margin-bottom: 2rem;
-            padding: 1.5rem;
-            background: #f8f8f8;
-            border-radius: 8px;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-        }
-
-        .services-summary {
-            text-align: center;
-            margin-top: 4rem;
-            padding: 2rem;
-            background: #f8f8f8;
-            border-radius: 8px;
-        }
-
-        .services-summary h3 {
-            margin-bottom: 1rem;
-        }
-
-        .services-summary p {
-            max-width: 800px;
-            margin: 0 auto 2rem;
-        }
-
-        .services-list {
-            display: flex;
-            flex-direction: column;
-            gap: 3rem;
-        }
-        
-        .service-row {
-            background: #f8f8f8;
-            padding: 2rem;
-            border-radius: 8px;
-        }
-
-        .service-row h3 {
-            margin-bottom: 1.5rem;
-            color: #333;
-        }
-
-        .service-cards {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-        }
-
-        .service-card {
-            flex: 1 1 calc(50% - 0.75rem);
-            min-width: 300px;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        }
-
-        @media (max-width: 768px) {
-            .service-card {
-                flex: 1 1 100%;
-            }
-        }
-
-        .hero {
-            position: relative;
-            min-height: 600px;
-            background-image: url('source/hero-bg.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            color: white;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .hero-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-
-        .hero-content {
-            position: relative;
-            z-index: 2;
-            max-width: 800px;
-            padding: 2rem;
-        }
-
-        .hero h1 {
-            font-size: 2.5rem;
-            margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
-        }
-    </style>
+    
     <script src="script.js"></script>
 </body>
 </html>
