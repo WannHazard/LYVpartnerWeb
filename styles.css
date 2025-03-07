@@ -46,7 +46,7 @@ nav {
     height: 80px; /* Increased from 50px */
     width: auto;
     display: block;
-    max-height: 40px; /* Reduce from original size */
+    max-height: 80px; /* Reduce from original size */
 }
 
 .nav-links {
