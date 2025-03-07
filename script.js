@@ -143,28 +143,44 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Lightbox functionality
-    const lightbox = document.getElementById('lightbox');
-    const lightboxImg = document.getElementById('lightbox-img');
-    let lightboxIndex = 0;
-
-    function openLightbox(index) {
-        lightboxIndex = index;
-        const imgSrc = items[index].querySelector('img').src;
-        lightboxImg.src = imgSrc;
-        lightbox.style.display = 'block';
-    }
-
-    function closeLightbox() {
-        lightbox.style.display = 'none';
-    }
-
-    function navigateLightbox(direction) {
-        lightboxIndex = (lightboxIndex + direction + items.length) % items.length;
-        const imgSrc = items[lightboxIndex].querySelector('img').src;
-        lightboxImg.src = imgSrc;
-    }
-
-    document.querySelector('.close-lightbox').addEventListener('click', closeLightbox);
-    document.querySelector('.lightbox-nav.prev').addEventListener('click', () => navigateLightbox(-1));
-    document.querySelector('.lightbox-nav.next').addEventListener('click', () => navigateLightbox(1));
+    document.addEventListener('DOMContentLoaded', function() {
+        const lightbox = document.getElementById('lightbox');
+        const lightboxImg = document.getElementById('lightbox-img');
+        const items = document.querySelectorAll('.gallery-item');
+        let lightboxIndex = 0;
+    
+        function openLightbox(index) {
+            lightboxIndex = index;
+            const imgSrc = items[index].querySelector('img').src;
+            lightboxImg.src = imgSrc;
+            lightbox.style.display = 'flex';  // Changed from 'block' to 'flex'
+        }
+    
+        function closeLightbox() {
+            lightbox.style.display = 'none';
+        }
+    
+        function navigateLightbox(direction) {
+            lightboxIndex = (lightboxIndex + direction + items.length) % items.length;
+            const imgSrc = items[lightboxIndex].querySelector('img').src;
+            lightboxImg.src = imgSrc;
+        }
+    
+        // Add click events to gallery items
+        items.forEach((item, index) => {
+            item.addEventListener('click', () => openLightbox(index));
+        });
+    
+        // Add click events to lightbox controls
+        document.querySelector('.close-lightbox').addEventListener('click', closeLightbox);
+        document.querySelector('.lightbox-nav.prev').addEventListener('click', () => navigateLightbox(-1));
+        document.querySelector('.lightbox-nav.next').addEventListener('click', () => navigateLightbox(1));
+    
+        // Close lightbox when clicking outside the image
+        lightbox.addEventListener('click', (e) => {
+            if (e.target === lightbox) {
+                closeLightbox();
+            }
+        });
+    });
 });
