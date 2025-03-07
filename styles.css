@@ -1097,8 +1097,8 @@ footer {
 /* For very small screens */
 @media screen and (max-width: 480px) {
     .logo-img {
-        height: 80px; /* Updated from 30px */
-        max-height: 80px; /* Updated from 30px */
+        height: 70px; /* Updated from 30px */
+        max-height: 70px; /* Updated from 30px */
     }
 }
 .service-card {
