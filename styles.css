@@ -1064,3 +1064,49 @@ footer {
     -webkit-user-select: none;
     user-select: none;
 }
+
+/* Add these improvements to your styles.css */
+
+@media (max-width: 768px) {
+    .hero-content {
+        padding: 0 20px;
+    }
+    
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .service-cards {
+        flex-direction: column;
+    }
+    
+    .service-card {
+        min-width: 100%;
+    }
+    
+    .gallery-item {
+        flex: 0 0 250px;
+        min-width: 250px;
+        height: 180px;
+    }
+}
+.service-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+.btn {
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn:active {
+    transform: translateY(1px);
+}
