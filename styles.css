@@ -10,6 +10,7 @@ body {
     line-height: 1.6;
     color: #333;
     background-color: #f9f9f9;
+    padding-top: 80px; /* Adjusted from 60px */
 }
 
 .container {
@@ -25,7 +26,7 @@ header {
     position: fixed;
     width: 100%;
     top: 0;
-    z-index: 1000;
+    z-index: 100;
 }
 
 nav {
@@ -84,6 +85,10 @@ nav {
     text-align: center;
     color: #fff;
     padding-top: 80px;
+    margin-top: -80px
+}
+section {
+    padding: 4rem 0;
 }
 
 .video-background {
@@ -1068,6 +1073,13 @@ footer {
 /* Add these improvements to your styles.css */
 
 @media (max-width: 768px) {
+    body {
+        padding-top: 60px;
+    }
+    .hero {
+        margin-top: -60px;
+        padding-top: 60px;
+    }
     .hero-content {
         padding: 0 20px;
     }
@@ -1090,8 +1102,8 @@ footer {
         height: 180px;
     }
     .logo-img {
-        height: 80px; /* Updated from 35px */
-        max-height: 80px; /* Updated from 35px */
+        height: 45px; /* Updated from 35px */
+        max-height: 45px; /* Updated from 35px */
     }
 }
 /* For very small screens */
