@@ -146,14 +146,15 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('DOMContentLoaded', function() {
         const lightbox = document.getElementById('lightbox');
         const lightboxImg = document.getElementById('lightbox-img');
-        const items = document.querySelectorAll('.gallery-item');
+        const items = document.querySelectorAll('.gallery-item:not(.clone)');
         let lightboxIndex = 0;
     
+        // Lightbox navigation
         function openLightbox(index) {
             lightboxIndex = index;
             const imgSrc = items[index].querySelector('img').src;
             lightboxImg.src = imgSrc;
-            lightbox.style.display = 'flex';  // Changed from 'block' to 'flex'
+            lightbox.style.display = 'flex';
         }
     
         function closeLightbox() {
@@ -166,12 +167,11 @@ document.addEventListener('DOMContentLoaded', () => {
             lightboxImg.src = imgSrc;
         }
     
-        // Add click events to gallery items
+        // Event listeners for lightbox
         items.forEach((item, index) => {
             item.addEventListener('click', () => openLightbox(index));
         });
     
-        // Add click events to lightbox controls
         document.querySelector('.close-lightbox').addEventListener('click', closeLightbox);
         document.querySelector('.lightbox-nav.prev').addEventListener('click', () => navigateLightbox(-1));
         document.querySelector('.lightbox-nav.next').addEventListener('click', () => navigateLightbox(1));
