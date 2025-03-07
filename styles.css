@@ -1090,15 +1090,15 @@ footer {
         height: 180px;
     }
     .logo-img {
-        height: 50px; /* Updated from 35px */
-        max-height: 50px; /* Updated from 35px */
+        height: 80px; /* Updated from 35px */
+        max-height: 80px; /* Updated from 35px */
     }
 }
 /* For very small screens */
 @media screen and (max-width: 480px) {
     .logo-img {
-        height: 45px; /* Updated from 30px */
-        max-height: 45px; /* Updated from 30px */
+        height: 80px; /* Updated from 30px */
+        max-height: 80px; /* Updated from 30px */
     }
 }
 .service-card {
