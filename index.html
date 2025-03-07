@@ -87,6 +87,74 @@
             </div>
         </div>
     </section>
+       <!-- Image Gallery -->
+       <section class="gallery-section">
+        <div class="gallery-container">
+            <div class="gallery-track">
+                <!-- Clone last items -->
+                <div class="gallery-item clone" onclick="openLightbox(8)">
+                    <img src="source/gallery/img9.jpg" alt="Projekt bild 9" loading="lazy">
+                </div>
+                <div class="gallery-item clone" onclick="openLightbox(9)">
+                    <img src="source/gallery/img10.jpg" alt="Projekt bild 10" loading="lazy">
+                </div>
+                
+                <!-- Original items -->
+                <div class="gallery-item" onclick="openLightbox(0)">
+                    <img src="source/gallery/img1.jpg" alt="Projekt bild 1" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(1)">
+                    <img src="source/gallery/img2.jpg" alt="Projekt bild 2" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(2)">
+                    <img src="source/gallery/img3.jpg" alt="Projekt bild 3" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(3)">
+                    <img src="source/gallery/img4.jpg" alt="Projekt bild 4" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(4)">
+                    <img src="source/gallery/img5.jpg" alt="Projekt bild 5" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(5)">
+                    <img src="source/gallery/img6.jpg" alt="Projekt bild 6" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(6)">
+                    <img src="source/gallery/img7.jpg" alt="Projekt bild 7" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(7)">
+                    <img src="source/gallery/img8.jpg" alt="Projekt bild 8" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(8)">
+                    <img src="source/gallery/img9.jpg" alt="Projekt bild 9" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(9)">
+                    <img src="source/gallery/img10.jpg" alt="Projekt bild 10" loading="lazy">
+                </div>
+                <div class="gallery-item" onclick="openLightbox(9)">
+                    <img src="source/gallery/img11.jpg" alt="Projekt bild 10" loading="lazy">
+                </div>
+                
+                <!-- Clone first items -->
+                <div class="gallery-item clone" onclick="openLightbox(0)">
+                    <img src="source/gallery/img1.jpg" alt="Projekt bild 1" loading="lazy">
+                </div>
+                <div class="gallery-item clone" onclick="openLightbox(1)">
+                    <img src="source/gallery/img2.jpg" alt="Projekt bild 2" loading="lazy">
+                </div>
+            </div>
+            <button class="gallery-nav prev" aria-label="Previous image">❮</button>
+            <button class="gallery-nav next" aria-label="Next image">❯</button>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox">
+        <span class="close-lightbox">&times;</span>
+        <img id="lightbox-img" src="" alt="Enlarged project image">
+        <button class="lightbox-nav prev" aria-label="Previous image">❮</button>
+        <button class="lightbox-nav next" aria-label="Next image">❯</button>
+    </div>
+
 
     <!-- Tjänster -->
     <section class="services" id="tjanster">
@@ -149,6 +217,7 @@
         </div>
     </section>
 
+ 
     <!-- Arbetsprocess -->
     <section class="process" id="process">
         <div class="container">

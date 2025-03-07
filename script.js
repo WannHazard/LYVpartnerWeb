@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const dots = document.querySelectorAll('.slider-dot');
     const images = document.querySelectorAll('.slider-image');
-    let currentIndex = 0;
+    let galleryIndex = 0;
     let interval;
 
     function showImage(index) {
@@ -80,4 +80,91 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Start the slideshow
     startSlideshow();
+
+    // Gallery functionality
+    const track = document.querySelector('.gallery-track');
+    const items = document.querySelectorAll('.gallery-item:not(.clone)');
+    const prevButton = document.querySelector('.gallery-nav.prev');
+    const nextButton = document.querySelector('.gallery-nav.next');
+    let currentIndex = 0;
+    let isTransitioning = false;
+    const itemWidth = 316; // 300px width + 16px gap
+
+    function updateGallery(direction) {
+        if (isTransitioning) return;
+        isTransitioning = true;
+        
+        currentIndex += direction;
+        const translateX = -((currentIndex + 2) * itemWidth);
+        track.style.transform = `translateX(${translateX}px)`;
+
+        // Reset position when reaching ends
+        if (currentIndex >= items.length) {
+            setTimeout(() => {
+                track.style.transition = 'none';
+                currentIndex = 0;
+                track.style.transform = `translateX(${-(2 * itemWidth)}px)`;
+                setTimeout(() => {
+                    track.style.transition = 'transform 0.5s ease-in-out';
+                    isTransitioning = false;
+                }, 10);
+            }, 500);
+        } else if (currentIndex < 0) {
+            setTimeout(() => {
+                track.style.transition = 'none';
+                currentIndex = items.length - 1;
+                track.style.transform = `translateX(${-((items.length + 1) * itemWidth)}px)`;
+                setTimeout(() => {
+                    track.style.transition = 'transform 0.5s ease-in-out';
+                    isTransitioning = false;
+                }, 10);
+            }, 500);
+        } else {
+            setTimeout(() => {
+                isTransitioning = false;
+            }, 500);
+        }
+    }
+
+    // Initialize position
+    track.style.transform = `translateX(${-(2 * itemWidth)}px)`;
+
+    // Event listeners
+    prevButton.addEventListener('click', () => updateGallery(-1));
+    nextButton.addEventListener('click', () => updateGallery(1));
+
+    // Auto scroll
+    let autoScrollInterval = setInterval(() => updateGallery(1), 5000);
+
+    // Pause auto scroll on hover
+    track.addEventListener('mouseenter', () => clearInterval(autoScrollInterval));
+    track.addEventListener('mouseleave', () => {
+        autoScrollInterval = setInterval(() => updateGallery(1), 5000);
+    });
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    let lightboxIndex = 0;
+
+    function openLightbox(index) {
+        lightboxIndex = index;
+        const imgSrc = items[index].querySelector('img').src;
+        lightboxImg.src = imgSrc;
+        lightbox.style.display = 'block';
+    }
+
+    function closeLightbox() {
+        lightbox.style.display = 'none';
+    }
+
+    function navigateLightbox(direction) {
+        lightboxIndex = (lightboxIndex + direction + items.length) % items.length;
+        const imgSrc = items[lightboxIndex].querySelector('img').src;
+        lightboxImg.src = imgSrc;
+    }
+
+    document.querySelector('.close-lightbox').addEventListener('click', closeLightbox);
+    document.querySelector('.lightbox-nav.prev').addEventListener('click', () => navigateLightbox(-1));
+    document.querySelector('.lightbox-nav.next').addEventListener('click', () => navigateLightbox(1));
 });
