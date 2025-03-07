@@ -32,6 +32,7 @@
 
     <!-- Hero-sektion -->
     <section class="hero">
+        <div class="hero-overlay"></div>
         <div class="hero-content">
             <h1>L&V Partner AB – Dina expertpartner för tak, akutservice och byggställning</h1>
             <p>Vi erbjuder snabba och högkvalitativa lösningar inom takreparationer, nödsituationer och renoveringar. Med fokus på kundnöjdhet och professionell service.</p>
@@ -272,6 +273,49 @@
             .service-card {
                 flex: 1 1 100%;
             }
+        }
+
+        .hero {
+            position: relative;
+            min-height: 600px;
+            background-image: url('source/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: white;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            padding: 2rem;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
     </style>
     <script src="script.js"></script>
