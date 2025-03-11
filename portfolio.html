@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfölj - L&VPartner</title>
+    <!-- Favicon and App Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="source/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="source/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="source/favicon-16x16.png">
+    <link rel="manifest" href="source/site.webmanifest">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header och navigering -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo.png" alt="L&VPartner Logo" class="logo-img">
+                </a>
+                <button class="mobile-menu-btn">☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="about.html">Om oss</a></li>
+                    <li><a href="portfolio.html" class="active">Portfölj</a></li>
+                    <li><a href="contact.html">Kontakt</a></li>
+                    <li><a href="kvalitetspolicy.html">KMA Policy</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Portfolio Hero Section -->
+    <section class="page-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="animate-on-scroll fade-in">Våra Projekt</h1>
+            <p class="animate-on-scroll fade-in-up">Upptäck våra senaste projekt och se hur vi har hjälpt våra kunder med högkvalitativa bygglösningar.</p>
+        </div>
+    </section>
+
+    <!-- Portfolio Categories -->
+    <section class="portfolio-categories">
+        <div class="container">
+            <div class="category-filters">
+                <button class="category-btn active" data-filter="all">Alla Projekt</button>
+                <button class="category-btn" data-filter="tak">Takarbeten</button>
+                <button class="category-btn" data-filter="byggstallning">Byggställning</button>
+                <button class="category-btn" data-filter="snickeri">Snickeri</button>
+                <button class="category-btn" data-filter="akut">Akutservice</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <!-- Project 1 -->
+                <div class="portfolio-item tak" data-category="tak">
+                    <div class="portfolio-image">
+                        <img src="source/gallery/img1.jpg" alt="Takprojekt 1" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Takrenovering</h3>
+                                <p>Komplett renovering av tak i Stockholm</p>
+                                <a href="#" class="btn-small">Se detaljer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="portfolio-item byggstallning" data-category="byggstallning">
+                    <div class="portfolio-image">
+                        <img src="source/gallery/img2.jpg" alt="Byggställning projekt" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Byggställning</h3>
+                                <p>Installation av säker byggställning för flerbostadshus</p>
+                                <a href="#" class="btn-small">Se detaljer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="portfolio-item snickeri" data-category="snickeri">
+                    <div class="portfolio-image">
+                        <img src="source/gallery/img3.jpg" alt="Snickeri projekt" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Träkonstruktion</h3>
+                                <p>Specialbyggd träkonstruktion för uteplats</p>
+                                <a href="#" class="btn-small">Se detaljer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="portfolio-item tak" data-category="tak">
+                    <div class="portfolio-image">
+                        <img src="source/gallery/img4.jpg" alt="Takprojekt 2" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Takbyte</h3>
+                                <p>Komplett byte av takpannor på villa</p>
+                                <a href="#" class="btn-small">Se detaljer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="portfolio-item akut" data-category="akut">
+                    <div class="portfolio-image">
+                        <img src="source/gallery/img5.jpg" alt="Akutservice projekt" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Akut takreparation</h3>
+                                <p>Snabb insats efter stormskada</p>
+                                <a href="#" class="btn-small">Se detaljer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="portfolio-item snickeri" data-category="snickeri">
+                    <div class="portfolio-image">
+                        <img src="source/gallery/img6.jpg" alt="Snickeri projekt 2" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Inredningssnickeri</h3>
+                                <p>Skräddarsydda trädetaljer för inomhusmiljö</p>
+                                <a href="#" class="btn-small">Se detaljer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 7 -->
+                <div class="portfolio-item byggstallning" data-category="byggstallning">
+                    <div class="portfolio-image">
+                        <img src="source/gallery/img7.jpg" alt="Byggställning projekt 2" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Komplex byggställning</h3>
+                                <p>Avancerad byggställning för historisk byggnad</p>
+                                <a href="#" class="btn-small">Se detaljer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 8 -->
+                <div class="portfolio-item tak" data-category="tak">
+                    <div class="portfolio-image">
+                        <img src="source/gallery/img8.jpg" alt="Takprojekt 3" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Takinstallation</h3>
+                                <p>Installation av nya takrännor och stuprör</p>
+                                <a href="#" class="btn-small">Se detaljer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 9 -->
+                <div class="portfolio-item akut" data-category="akut">
+                    <div class="portfolio-image">
+                        <img src="source/gallery/img9.jpg" alt="Akutservice projekt 2" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Snöskottning</h3>
+                                <p>Akut snöskottning efter kraftigt snöfall</p>
+                                <a href="#" class="btn-small">Se detaljer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 10 -->
+                <div class="portfolio-item snickeri" data-category="snickeri">
+                    <div class="portfolio-image">
+                        <img src="source/gallery/img10.jpg" alt="Snickeri projekt 3" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Träterrass</h3>
+                                <p>Design och konstruktion av träterrass</p>
+                                <a href="#" class="btn-small">Se detaljer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 11 -->
+                <div class="portfolio-item tak" data-category="tak">
+                    <div class="portfolio-image">
+                        <img src="source/gallery/img11.jpg" alt="Takprojekt 4" loading="lazy">
+                        <div class="portfolio-overlay">
+                            <div class="portfolio-info">
+                                <h3>Takunderhåll</h3>
+                                <p>Regelbundet underhåll och inspektion av tak</p>
+                                <a href="#" class="btn-small">Se detaljer</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content animate-on-scroll fade-in">
+                <h2>Redo att starta ditt projekt?</h2>
+                <p>Kontakta oss idag för en kostnadsfri konsultation och offert.</p>
+                <a href="contact.html" class="btn btn-primary">Kontakta oss</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-container">
+                <div class="footer-section">
+                    <h3>L&VPartner</h3>
+                    <p>Professionella byggtjänster i Sverige med fokus på kvalitet och kundnöjdhet.</p>
+                    <p class="copyright">&copy; 2025 L&VPartner. Alla rättigheter förbehållna.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Tjänster</h3>
+                    <ul class="footer-links">
+                        <li><a href="about.html#takarbeten">Takarbeten</a></li>
+                        <li><a href="about.html#akutservice">Akutservice</a></li>
+                        <li><a href="about.html#byggstallning">Byggställning</a></li>
+                        <li><a href="about.html#snickeri">Snickeri</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Kontakt</h3>
+                    <ul class="footer-links">
+                        <li><a href="contact.html">Kontaktformulär</a></li>
+                        <li><a href="tel:+46732512274">073-251 22 74</a></li>
+                        <li><a href="tel:+46737745920">073-774 59 20</a></li>
+                        <li><address>Orrestaslingan 12, 123 43 Bandhagen</address></li>
+                        <li><a href="mailto:info@lvpartner.se">info@lvpartner.se</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

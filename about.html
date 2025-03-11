@@ -10,6 +10,106 @@
     <link rel="icon" type="image/png" sizes="16x16" href="source/favicon-16x16.png">
     <link rel="manifest" href="source/site.webmanifest">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Page-specific styles */
+        body {
+            background-color: #f5f5f5;
+        }
+        
+        .page-header {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('source/hero-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #fff;
+            padding: 8rem 0 4rem;
+            margin-top: -80px;
+            text-align: center;
+        }
+        
+        .header-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .header-separator {
+            width: 80px;
+            height: 4px;
+            background-color: #2378d3;
+            margin: 1.5rem auto;
+        }
+        
+        .about {
+            background-color: #fff;
+            padding: 4rem 0;
+        }
+        
+        .about-container {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            padding: 2rem;
+            overflow: hidden;
+        }
+        
+        .about-img {
+            margin-bottom: 2rem;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        
+        .about-hero-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .welcome-section {
+            background-color: #f9f9f9;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            border-left: 4px solid #2378d3;
+        }
+        
+        .about-content {
+            padding: 1rem;
+        }
+        
+        .about-content h2 {
+            color: #2378d3;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .about-content h2:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background-color: #2378d3;
+        }
+        
+        .benefits-list li {
+            margin-bottom: 1rem;
+            position: relative;
+            padding-left: 10px;
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .benefits-list li:hover {
+            transform: translateX(5px);
+            transition: transform 0.3s ease;
+        }
+    </style>
 </head>
 <body>
     <!-- Header och navigering -->
@@ -21,8 +121,9 @@
                 </a>
                 <button class="mobile-menu-btn">☰</button>
                 <ul class="nav-links">
-                    <li><a href="index.html#tjanster">Tjänster</a></li>
-                    <li><a href="about.html">Om oss</a></li>
+                    <li><a href="index.html">Hem</a></li>
+                    <li><a href="about.html" class="active">Om oss</a></li>
+                    <li><a href="portfolio.html">Portfölj</a></li>
                     <li><a href="contact.html">Kontakt</a></li>
                     <li><a href="kvalitetspolicy.html">KMA Policy</a></li>
                 </ul>
@@ -86,10 +187,10 @@
             <div class="footer-section">
                 <h3>Tjänster</h3>
                 <ul class="footer-links">
-                    <li><a href="#tjanster">Takarbeten</a></li>
-                    <li><a href="#tjanster">Måleriarbeten</a></li>
-                    <li><a href="#tjanster">Snickeri</a></li>
-                    <li><a href="#tjanster">Byggstädning</a></li>
+                    <li><a href="about.html#takarbeten">Takarbeten</a></li>
+                    <li><a href="about.html#akutservice">Akutservice</a></li>
+                    <li><a href="about.html#byggstallning">Byggställning</a></li>
+                    <li><a href="about.html#snickeri">Snickeri</a></li>
                 </ul>
             </div>
             <div class="footer-section">

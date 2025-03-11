@@ -4,25 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>L&VPartner - Professionella byggtjänster i Sverige</title>
-        <!-- Favicon and App Icons -->
+    <!-- Favicon and App Icons -->
     <link rel="apple-touch-icon" sizes="180x180" href="source/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="source/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="source/favicon-16x16.png">
     <link rel="manifest" href="source/site.webmanifest">
     <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="landing-page">
     <!-- Header och navigering -->
     <header>
         <div class="container">
             <nav>
-                 <a href="index.html" class="logo">
+                <a href="index.html" class="logo">
                     <img src="logo.png" alt="L&VPartner Logo" class="logo-img">
                 </a>
                 <button class="mobile-menu-btn">☰</button>
                 <ul class="nav-links">
-                    <li><a href="index.html">Tjänster</a></li>
+                    <li><a href="index.html" class="active">Hem</a></li>
                     <li><a href="about.html">Om oss</a></li>
+                    <li><a href="portfolio.html">Portfölj</a></li>
                     <li><a href="contact.html">Kontakt</a></li>
                     <li><a href="kvalitetspolicy.html">KMA Policy</a></li>
                 </ul>
@@ -31,227 +32,118 @@
     </header>
 
     <!-- Hero-sektion -->
-    <section class="hero">
+    <section class="hero fullscreen-hero">
         <div class="hero-overlay"></div>
         <div class="hero-content">
-            <h1>L&V Partner AB – Dina expertpartner för tak, akutservice och byggställning</h1>
-            <p>Vi erbjuder snabba och högkvalitativa lösningar inom takreparationer, nödsituationer och renoveringar. Med fokus på kundnöjdhet och professionell service.</p>
-            <div class="hero-buttons">
+            <h1 class="animate-on-scroll fade-in">L&V Partner AB</h1>
+            <h2 class="animate-on-scroll fade-in-up">Din expertpartner för tak, akutservice och byggställning</h2>
+            <p class="animate-on-scroll fade-in-up">Vi erbjuder snabba och högkvalitativa lösningar inom takreparationer, nödsituationer och renoveringar. Med fokus på kundnöjdhet och professionell service.</p>
+            <div class="hero-buttons animate-on-scroll fade-in-up">
                 <a href="contact.html" class="btn btn-primary">Kontakta oss</a>
-                <a href="#tjanster" class="btn btn-secondary">Våra tjänster</a>
+                <a href="#services-overview" class="btn btn-secondary">Våra tjänster</a>
             </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="scroll-arrow"></span>
         </div>
     </section>
     
-    <!-- Om oss -->
-    <section class="about" id="om-oss">
+    <!-- Services Overview -->
+    <section id="services-overview" class="services-overview">
         <div class="container">
-            <h2 class="section-title">Om L&VPartner</h2>
-            <div class="about-container">
-                <div class="about-img-slider">
-                    <div class="slider-container">
-                        <!-- Update your image tags like this -->
-                        <img src="source/l&V1.jpg" alt="L&V Partner arbete" class="slider-image active" loading="lazy">
-                        <img src="source/l&vpartner2.jpg" alt="L&V Partner projekt" class="slider-image">
-                        <img src="source/l&vpartner3.jpg" alt="L&V Partner team" class="slider-image">
-                        <div class="slider-controls">
-                            <button type="button" class="slider-dot active" data-index="0" title="Go to slide 1" aria-label="Go to slide 1"></button>
-                            <button type="button" class="slider-dot" data-index="1" title="Go to slide 2" aria-label="Go to slide 2"></button>
-                            <button type="button" class="slider-dot" data-index="2" title="Go to slide 3" aria-label="Go to slide 3"></button>
-                        </div>
+            <h2 class="section-title animate-on-scroll fade-in">Våra Specialområden</h2>
+            <div class="services-grid">
+                <div class="service-box animate-on-scroll fade-in-left">
+                    <div class="service-icon">
+                        <img src="source/gallery/img1.jpg" alt="Takarbeten" class="service-img">
                     </div>
-                </div>
-                <div class="about-content">
-                    <h3>Din pålitliga partner för tak, akutservice, byggställning och snickeri</h3>
-                    <p>På L&V Partner har vi över 10 års erfarenhet av att leverera högkvalitativa lösningar inom takreparationer, nödsituationer, snickeriarbeten och underhåll i Sverige. Vårt team av specialiserade hantverkare fokuserar på att ge snabb, effektiv och hållbar service i varje projekt.</p>
-                    
-                    <p>Vi erbjuder expertis inom viktiga områden såsom:</p>
-                    <ul class="benefits-list">
-                        <li> Takreparationer: Från ersättning av takpannor till installation av säkerhetsanordningar.</li>
-                        <li> Akutservice: Vi är redo att hjälpa dig när du behöver oss mest – oavsett om det gäller snöskottning, reparationer eller andra nödsituationer.</li>
-                        <li> Byggställning: Säker och effektiv montering för byggprojekt eller underhållsarbete.</li>
-                        <li> Snickeri: Skräddarsydda lösningar i trä för konstruktioner, ytbehandlingar och renoveringar, alltid med material av högsta kvalitet.</li>
-                    </ul>
-
-                    <p>Vårt mål är att vara ditt förstahandsval när det gäller professionell service och pålitlig prestation. Vi använder endast de bästa materialen och följer höga kvalitetsstandarder för att garantera långsiktiga resultat.</p>
-
-                    <h4>Varför välja L&V Partner?</h4>
-                    <ul class="benefits-list">
-                        <li>✔ Erfarenhet och engagemang – Vårt team består av experter med lång erfarenhet inom branschen.</li>
-                        <li>✔ Snabb respons – Vi är alltid redo att agera när du behöver oss, särskilt i akutsituationer.</li>
-                        <li>✔ Personlig kontakt – Vi ser varje kund som unik och arbetar tätt tillsammans med dig för att uppnå dina önskemål.</li>
-                        <li>✔ Hållbara lösningar – Vi investerar i tekniker och material som ger långsiktigt värde.</li>
-                    </ul>
-
-                    <p class="cta-text">Låt oss ta hand om ditt nästa projekt, oavsett om det rör sig om en mindre reparation, en träinstallation eller ett större underhållsarbete. Kontakta oss idag för mer information eller för att få en kostnadsfri</p>
-                </div>
-            </div>
-        </div>
-    </section>
-       <!-- Image Gallery -->
-       <section class="gallery-section">
-        <div class="gallery-container">
-            <div class="gallery-track">
-                <!-- Clone last items -->
-                <div class="gallery-item clone" onclick="openLightbox(8)">
-                    <img src="source/gallery/img9.jpg" alt="Projekt bild 9" loading="lazy">
-                </div>
-                <div class="gallery-item clone" onclick="openLightbox(9)">
-                    <img src="source/gallery/img10.jpg" alt="Projekt bild 10" loading="lazy">
+                    <h3>Takarbeten</h3>
+                    <p>Professionell installation, reparation och underhåll av alla typer av tak.</p>
+                    <a href="about.html#takarbeten" class="service-link">Läs mer</a>
                 </div>
                 
-                <!-- Original items -->
-                <div class="gallery-item" onclick="openLightbox(0)">
-                    <img src="source/gallery/img1.jpg" alt="Projekt bild 1" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(1)">
-                    <img src="source/gallery/img2.jpg" alt="Projekt bild 2" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(2)">
-                    <img src="source/gallery/img3.jpg" alt="Projekt bild 3" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(3)">
-                    <img src="source/gallery/img4.jpg" alt="Projekt bild 4" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(4)">
-                    <img src="source/gallery/img5.jpg" alt="Projekt bild 5" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(5)">
-                    <img src="source/gallery/img6.jpg" alt="Projekt bild 6" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(6)">
-                    <img src="source/gallery/img7.jpg" alt="Projekt bild 7" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(7)">
-                    <img src="source/gallery/img8.jpg" alt="Projekt bild 8" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(8)">
-                    <img src="source/gallery/img9.jpg" alt="Projekt bild 9" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(9)">
-                    <img src="source/gallery/img10.jpg" alt="Projekt bild 10" loading="lazy">
-                </div>
-                <div class="gallery-item" onclick="openLightbox(9)">
-                    <img src="source/gallery/img11.jpg" alt="Projekt bild 10" loading="lazy">
+                <div class="service-box animate-on-scroll fade-in">
+                    <div class="service-icon">
+                        <img src="source/gallery/img5.jpg" alt="Akutservice" class="service-img">
+                    </div>
+                    <h3>Akutservice</h3>
+                    <p>Snabb respons vid nödsituationer som läckage, stormskador och andra akuta problem.</p>
+                    <a href="about.html#akutservice" class="service-link">Läs mer</a>
                 </div>
                 
-                <!-- Clone first items -->
-                <div class="gallery-item clone" onclick="openLightbox(0)">
-                    <img src="source/gallery/img1.jpg" alt="Projekt bild 1" loading="lazy">
-                </div>
-                <div class="gallery-item clone" onclick="openLightbox(1)">
-                    <img src="source/gallery/img2.jpg" alt="Projekt bild 2" loading="lazy">
-                </div>
-            </div>
-            <button class="gallery-nav prev" aria-label="Previous image">❮</button>
-            <button class="gallery-nav next" aria-label="Next image">❯</button>
-        </div>
-    </section>
-
-    <!-- Lightbox -->
-    <div id="lightbox" class="lightbox">
-        <span class="close-lightbox">&times;</span>
-        <img id="lightbox-img" src="" alt="Enlarged project image">
-        <button class="lightbox-nav prev" aria-label="Previous image">❮</button>
-        <button class="lightbox-nav next" aria-label="Next image">❯</button>
-    </div>
-
-
-    <!-- Tjänster -->
-    <section class="services" id="tjanster">
-        <div class="container">
-            <h2 class="section-title">Våra Tjänster</h2>
-            <div class="services-list">
-                <!-- Underhåll och Säkerhet av Tak -->
-                <div class="service-row">
-                    <h3>Underhåll och Säkerhet av Tak</h3>
-                    <div class="service-cards">
-                        <div class="service-card">
-                            <h4>✅ Målning och djuprengöring av tak</h4>
-                            <p>Vi erbjuder målning och grundlig rengöring av tak i olika färger för att ta bort fläckar, mögel och skador på ytan. Vår behandling skyddar taket mot väderlek och förbättrar dess utseende med hållbara material.</p>
-                        </div>
-                        <div class="service-card">
-                            <h4>✅ Scaffolding och takssäkerhet</h4>
-                            <p>För att säkerställa arbetsplatsens säkerhet vid höjdar installerar vi certifierade scaffolds som garanterar stabilitet och trygghet vid arbeten i höjd. Dessa scaffolds följer strikta normer och säkerhetsstandarder.</p>
-                        </div>
-                        <div class="service-card">
-                            <h4>✅ Ersättning av takpannor</h4>
-                            <p>Vi utför professionell ersättning av skadade eller åldrande takpannor. Våra experter väljer högkvalitativa material som kan stå emot extrema väderförhållanden, garanterande långtidsfunktion.</p>
-                        </div>
-                        <div class="service-card">
-                            <h4>✅ Snöborttagning</h4>
-                            <p>För att förhindra skador på tak och risker för fall av is och snö erbjuder vi en effektiv tjänst för snöborttagning. Vårt team arbetar säkert och effektivt för att skydda både byggnaden och omgivningen.</p>
-                        </div>
+                <div class="service-box animate-on-scroll fade-in-right">
+                    <div class="service-icon">
+                        <img src="source/gallery/img2.jpg" alt="Byggställning" class="service-img">
                     </div>
+                    <h3>Byggställning</h3>
+                    <p>Säker och effektiv montering av byggställningar för alla typer av projekt.</p>
+                    <a href="about.html#byggstallning" class="service-link">Läs mer</a>
                 </div>
-
-                <!-- Installation och Underhåll -->
-                <div class="service-row">
-                    <h3>Installation och Underhåll</h3>
-                    <div class="service-cards">
-                        <div class="service-card">
-                            <h4>✅ Reparation, underhåll och installation av kanaler</h4>
-                            <p>Vi är specialisterna när det gäller installation och underhåll av avlopps-system för tak, inklusive kanaler och nedfallet. Vi garanterar hållbara lösningar som förhindrar läckage, vattenskador och ackumulering av löv och smuts.</p>
-                        </div>
-                        <div class="service-card">
-                            <h4>✅ Snickeri</h4>
-                            <p>Vi specialiseras inom reparation av trä-tak, där vi säkerställer deras stabilitet och motståndskraft mot extrema väderförhållanden. Vårt experterna använder högkvalitativa material och moderna tekniker för att förlänga takstrukturens livslängd.</p>
-                        </div>
+                
+                <div class="service-box animate-on-scroll fade-in-left">
+                    <div class="service-icon">
+                        <img src="source/gallery/img3.jpg" alt="Snickeri" class="service-img">
                     </div>
-                </div>
-
-                <!-- Kompletterande Tjänster -->
-                <div class="service-row">
-                    <h3>Kompletterande Tjänster</h3>
-                    <div class="service-cards">
-                        <div class="service-card">
-                            <h4>✅ Byggstädning</h4>
-                            <p>Efter slutförandet av ett bygg- eller underhållningsprojekt utför vi en grundlig städning av byggnaden och området runt. Vi tar hand om allt – från cement- och stenresterna till slutlig polishning, lämnande området klart och redo att användas.</p>
-                        </div>
-                        <div class="service-card">
-                            <h4>✅ Personalhyra</h4>
-                            <p>Behöver du extra hjälp för ett specifikt projekt? Vi hyr ut kvalificerat personal för korttidiga uppgifter inom bygg, renovering och underhåll. Vårt team är högt utbildat och följer de högsta kvalitetsstandarderna.</p>
-                        </div>
-                    </div>
+                    <h3>Snickeri</h3>
+                    <p>Skräddarsydda lösningar i trä för konstruktioner, ytbehandlingar och renoveringar.</p>
+                    <a href="about.html#snickeri" class="service-link">Läs mer</a>
                 </div>
             </div>
         </div>
     </section>
 
- 
-    <!-- Arbetsprocess -->
-    <section class="process" id="process">
+    <!-- Why Choose Us -->
+    <section class="why-choose-us">
         <div class="container">
-            <h2 class="section-title">Så arbetar vi med processtyrt byggprojektering</h2>
-            <div class="process-container">
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <div class="step-content">
-                            <h3>Identifiera projektets mål</h3>
-                            <p>Vi söker en djupare förståelse av projektet och sina handlingar så att alla inblandade har en gemensam vision att arbeta mot.</p>
-                        </div>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <div class="step-content">
-                            <h3>Lyfta idéer till verklighet</h3>
-                            <p>Idéer och planering som vi bollat fram ska nu förverkligas. Vi väljer metod, tar fram en plan för projektet samt en tydlig offert utan dolda avgifter och lummiga skrivelser.</p>
-                        </div>
-                    </div>
-
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <div class="step-content">
-                            <h3>Genomförande och utvärdering</h3>
-                            <p>Under genomförande fasen tas resultat fram och överlämnas till er så ni kan följa projektets utveckling. Aktiviteter och kostnader följs regelbundet upp, avikelser analyseras och eventuella ändringar hanteras. Allt i samspel med er!</p>
-                        </div>
-                    </div>
+            <div class="why-choose-content">
+                <div class="why-choose-text animate-on-scroll fade-in-left">
+                    <h2 class="section-title">Varför välja L&V Partner?</h2>
+                    <ul class="benefits-list">
+                        <li>✔ <strong>Erfarenhet och engagemang</strong> – Vårt team består av experter med lång erfarenhet inom branschen.</li>
+                        <li>✔ <strong>Snabb respons</strong> – Vi är alltid redo att agera när du behöver oss, särskilt i akutsituationer.</li>
+                        <li>✔ <strong>Personlig kontakt</strong> – Vi ser varje kund som unik och arbetar tätt tillsammans med dig för att uppnå dina önskemål.</li>
+                        <li>✔ <strong>Hållbara lösningar</strong> – Vi investerar i tekniker och material som ger långsiktigt värde.</li>
+                    </ul>
+                    <a href="about.html" class="btn btn-secondary">Läs mer om oss</a>
                 </div>
-                <div class="process-image">
-                    <img src="source/Imagen-test.png" alt="Byggprocess illustration">
+                <div class="why-choose-image animate-on-scroll fade-in-right">
+                    <img src="source/l&V1.jpg" alt="L&V Partner arbete" loading="lazy">
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Showcase -->
+    <section class="project-showcase">
+        <div class="container">
+            <h2 class="section-title animate-on-scroll fade-in">Våra Senaste Projekt</h2>
+            <div class="showcase-gallery">
+                <div class="showcase-item animate-on-scroll fade-in">
+                    <img src="source/gallery/img1.jpg" alt="Projekt 1" loading="lazy">
+                </div>
+                <div class="showcase-item animate-on-scroll fade-in">
+                    <img src="source/gallery/img2.jpg" alt="Projekt 2" loading="lazy">
+                </div>
+                <div class="showcase-item animate-on-scroll fade-in">
+                    <img src="source/gallery/img3.jpg" alt="Projekt 3" loading="lazy">
+                </div>
+                <div class="showcase-item animate-on-scroll fade-in">
+                    <img src="source/gallery/img4.jpg" alt="Projekt 4" loading="lazy">
+                </div>
+            </div>
+            <div class="showcase-cta animate-on-scroll fade-in">
+                <a href="portfolio.html" class="btn btn-primary">Se alla projekt</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content animate-on-scroll fade-in">
+                <h2>Redo att starta ditt projekt?</h2>
+                <p>Kontakta oss idag för en kostnadsfri konsultation och offert.</p>
+                <a href="contact.html" class="btn btn-primary">Kontakta oss</a>
             </div>
         </div>
     </section>
@@ -268,10 +160,10 @@
                 <div class="footer-section">
                     <h3>Tjänster</h3>
                     <ul class="footer-links">
-                        <li><a href="#tjanster">Takarbeten</a></li>
-                        <li><a href="#tjanster">Måleriarbeten</a></li>
-                        <li><a href="#tjanster">Snickeri</a></li>
-                        <li><a href="#tjanster">Byggstädning</a></li>
+                        <li><a href="about.html#takarbeten">Takarbeten</a></li>
+                        <li><a href="about.html#akutservice">Akutservice</a></li>
+                        <li><a href="about.html#byggstallning">Byggställning</a></li>
+                        <li><a href="about.html#snickeri">Snickeri</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
